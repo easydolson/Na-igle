@@ -1,13 +1,11 @@
 :root {
+    /* Основной темный цвет для фона */
     --color1: #10161d;
+    /* Основной оранжевый цвет для акцентов */
     --color2: #fc9f17;
-    --color3: #ffffff;
 }
 
-footer {
-    padding: 50px 0;
-}
-
+/* Общий стиль для секций (разделов) */
 section {
     padding: 50px 0;
     background-color: var(--color1)
@@ -23,6 +21,7 @@ header {
     font-weight: bold;
 }
 
+/* Стили для горизонтальной линии в header */
 .my-header-line {
     width: 1200px;
     height: 3px;
@@ -31,12 +30,13 @@ header {
     margin-bottom: 40px;
 }
 
+/* Стили для контейнера линии с кнопкой */
 .my-head-btn-line-container {
     position: relative;
     height: 2px;
 }
 
-
+/* Стили для линии рядом с кнопкой */
 .my-head-btn-line {
     position: relative;
     overflow: hidden;
@@ -46,6 +46,25 @@ header {
     margin-top: 20px;
 }
 
+/* Стили для кнопки */
+.my-btn {
+    display: block;
+    max-width: 370px;
+    margin: 0 auto;
+    padding: 8px 30px;
+    color: var(--bs--black);
+    background-color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Стили для кнопки при наведении */
+.my-btn:hover {
+    color: var(--bs--black);
+    background-color: var(--color2);
+}
+
+/* Стили движущегося круга по линии */
 .line-circle {
     position: absolute;
     width: 10px;
@@ -57,6 +76,7 @@ header {
     animation: lineCircle 25s linear infinite;
 }
 
+/* Анимация движущегося круга по линии */
 @keyframes lineCircle {
     0% {
         left: 0;
@@ -71,20 +91,24 @@ header {
     }
 }
 
+/* Стили для анимации текста */
 .text-animate {
     opacity: 0;
     transform: translateY(50px);
     animation: text-reveal 1s ease forwards;
 }
 
+/* Задержка для первого элемента текста */
 .text-animate:nth-child(1) {
     animation-delay: 0s;
 }
 
+/* Задержка для второго элемента текста */
 .text-animate:nth-child(2) {
     animation-delay: 0.5s;
 }
 
+/* Анимация появления текста */
 @keyframes text-reveal {
     0% {
         opacity: 0;
@@ -97,9 +121,7 @@ header {
     }
 }
 
-
-
-
+/* Стили для вращающихся крестов в header */
 .header-cross-1,
 .header-cross-2,
 .header-cross-3 {
@@ -130,12 +152,40 @@ header {
     animation-duration: 27s;
 }
 
-///
+/* Анимация вращения по часовой стрелке */
+@keyframes rotate-clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Анимация вращения против часовой стрелки */
+@keyframes rotate-counterclockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* ABOUT */
 .about {
     padding: 110px;
 }
 
+.about-text {
+    color: white;
+    font-size: 26px;
+}
+
+
+/* Стили для различных типов границ */
 .my-border {
     border: 2px solid var(--color2);
     border-radius: 15px;
@@ -154,49 +204,21 @@ header {
     padding: 20px;
 }
 
-footer {
-    padding: 10px 0;
-    background: url("https://static.tildacdn.com/tild6430-3531-4430-a137-646633336333/tareq-ajalyakin-72aE.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 
-.my-btn {
-    display: block;
-    max-width: 370px;
-    margin: 0 auto;
-    padding: 8px 30px;
-    color: var(--bs--black);
-    background-color: var(--color3);
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.my-btn:hover {
-    color: var(--bs--black);
-    background-color: var(--color2);
-}
+/* PORTFOLIO */
 
 .portfolio {
     background-color: var(--color1)
 }
+
+/* MASTERS */
 
 .my-carousel-line {
     width: 100px;
     height: 3px;
     background-color: var(--color2);
     margin: 15px auto 10px;
-}
-
-.carousel-container {
-    width: 400px;
-    margin: 0 auto;
-}
-
-.about-text {
-    color: white;
-    font-size: 26px;
 }
 
 /* PRICE */
@@ -212,11 +234,13 @@ footer {
 }
 
 /* CONSULTATION */
+
 .consultation {
     position: relative;
     overflow: hidden;
 }
 
+/* Стили для иконок социальных сетей в секции Консультация */
 .social-buttons .social-icon {
     display: inline-block;
     width: 200px;
@@ -229,13 +253,14 @@ footer {
     transition: all 0.3s ease;
 }
 
+/* Стили для изображений внутри иконок социальных сетей */
 .social-buttons .social-icon img {
     width: 28px;
     height: 28px;
     vertical-align: middle;
 }
 
-
+/* Стили для иконок Telegram, WhatsApp, ВКонтакте */
 .social-buttons .social-icon.telegram {
     background-color: #27a7e7;
 }
@@ -248,14 +273,13 @@ footer {
     background-color: #0077ff;
 }
 
+/* Стили при наведении на иконки социальных сетей */
 .social-buttons .social-icon:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* CROSSES */
-
-
+/* crosses (Стили для вращающихся крестов)*/
 .cross-1,
 .cross-2,
 .cross-3 {
@@ -286,35 +310,14 @@ footer {
     animation-duration: 20s;
 }
 
-@keyframes rotate-clockwise {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-@keyframes rotate-counterclockwise {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-
-/* MAP */
+/* MAP (КОНТАКТНАЯ ИНФОРМАЦИЯ) */
 
 .map-container {
     width: 2000px;
     height: 2000px;
 }
 
+/* Стили для текста на карточке */
 .card-text {
     color: white;
     font-size: 24px;
@@ -322,12 +325,14 @@ footer {
     text-align: center
 }
 
+/* Стили для блока социальных иконок */
 .social-icons {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
+/* Стили для отдельной социальной иконки */
 .social-icon {
     display: inline-flex;
     justify-content: center;
@@ -340,28 +345,31 @@ footer {
     transition: background-color 0.3s ease;
 }
 
+/* Стили для иконок внутри социальных иконок */
 .social-icon i {
     font-size: 40px;
 }
 
+/* Стили для иконок внутри социальных иконок */
 .social-icons .social-icon:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Цвет текста */
+/* FOOTER */
+
+footer {
+    padding: 10px 0;
+    background: url("https://static.tildacdn.com/tild6430-3531-4430-a137-646633336333/tareq-ajalyakin-72aE.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Вспомогательные классы для цветов */
 .color1 {
     color: var(--color1)
 }
 
 .color2 {
     color: var(--color2)
-}
-
-.bg1 {
-    background-color: var(--color1)
-}
-
-.bg2 {
-    background-color: var(--color2)
 }
